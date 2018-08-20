@@ -12,7 +12,7 @@ When it's finished processing, click on "save".
 
 !["save" link in Firefox](https://i.imgur.com/UO0u7iE.png)
 
-This should save as a filename like `profile.json`.
+This should save with a filename like `profile.json`.
 
 You should be able to open that file in https://www.speedscope.app/.
 
