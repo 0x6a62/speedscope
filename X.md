@@ -1,1 +1,0 @@
-This wiki includes instructions on how to import to speedscope from various different profilers. Click the links in the sidebar to find instructions on how to import from a specific source.
