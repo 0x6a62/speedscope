@@ -1,4 +1,4 @@
-There are two ways to import profiles from Node.js: using the Chrome inspector, and using v8 logs.
+There are two ways to import profiles from Node.js: using the Chrome inspector, and using `node --prof`.
 
 ## Importing from the Chrome inspector
 
@@ -43,4 +43,40 @@ Then you should be able to open it like so:
 
 ```
 speedscope /path/to/profile.json
+```
+
+## Importing from `node --prof`
+
+If you record profiling information like so:
+
+```
+node --prof /path/to/my/script.js
+```
+
+Then this will generate one or more `isolate*.log` files. You can
+convert these files into a file that can be imported into speedscope
+like so:
+
+```
+node --prof-process --preprocess -j isolate*.log > profile.v8log.json
+```
+
+You should be able to open that file in https://www.speedscope.app/.
+
+To view it offline, you'll need to install speedscope via `npm`:
+
+```
+npm install -g speedscope
+```
+
+Then you should be able to open it like so:
+
+```
+speedscope /path/to/profile.v8log.json
+```
+
+You can also pipe the output of `node --prof-process` directly to speedscope with a trailing `-` like so:
+
+```
+node --prof-process --preprocess -j isolate*.log | speedscope -
 ```
