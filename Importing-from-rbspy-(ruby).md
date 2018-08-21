@@ -19,5 +19,5 @@ npm install -g speedscope
 Then you should be able to open it like so:
 
 ```
-speedscope /path/to/profile.json
+speedscope /path/to/profile.speedscope.json
 ```
