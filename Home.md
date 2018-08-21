@@ -1,1 +1,1 @@
-Welcome to the speedscope wiki!
+This wiki is used as a place to collect instructions on how to import from various profilers into speedscope. See the links in the sidebar.
