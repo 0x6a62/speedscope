@@ -1,4 +1,4 @@
-There are two ways to import profiles from Node.js: using the Chrome inspector, and using `node --prof`.
+There are two ways to import profiles from Node.js: using the Chrome inspector, and using `node --prof`. The Chrome inspector strategy can also be used to import heap snapshots.
 
 ## Importing from the Chrome inspector
 
@@ -43,6 +43,34 @@ Then you should be able to open it like so:
 
 ```
 speedscope /path/to/profile.json
+```
+
+## Importing a heap profile
+
+Like the CPU Profiling, you can use the Chrome Inspector to record a heap allocation profile. First, launch your process with the `--inspect` flag. Next, go the `` section and select the "Allocation Sampling" option.
+
+![Selection allocation sampling](https://user-images.githubusercontent.com/150329/46621570-a5ea1f00-cadc-11e8-8e8f-c2dc1db983bd.png)
+
+Click the start button to start recording a profile.
+
+Now, use the application for a while, then click the `Stop` button. 
+
+![Saving the .heapprofile file](https://user-images.githubusercontent.com/150329/46621778-3fb1cc00-cadd-11e8-84e1-c2079f63cfab.png)
+
+Click "save" to save the recorded profile. Save it with the default `.heapprofile` file extension.
+
+You should be able to open that file in https://www.speedscope.app/.
+
+To view it offline, you'll need to install speedscope via `npm`:
+
+```
+npm install -g speedscope
+```
+
+Then you should be able to open it like so:
+
+```
+speedscope /path/to/profile.heapprofile
 ```
 
 ## Importing from `node --prof`
