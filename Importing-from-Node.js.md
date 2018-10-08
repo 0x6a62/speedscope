@@ -47,7 +47,7 @@ speedscope /path/to/profile.json
 
 ## Importing a heap profile
 
-Like the CPU Profiling, you can use the Chrome Inspector to record a heap allocation profile. First, launch your process with the `--inspect` flag. Next, go the `` section and select the "Allocation Sampling" option.
+Like the CPU Profiling, you can use the Chrome Inspector to record a heap allocation profile. First, launch your process with the `--inspect` flag. Next, go the `Memory` section and select the "Allocation sampling" option.
 
 ![Selection allocation sampling](https://user-images.githubusercontent.com/150329/46621570-a5ea1f00-cadc-11e8-8e8f-c2dc1db983bd.png)
 
