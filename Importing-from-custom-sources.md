@@ -26,3 +26,9 @@ main;a;b 5
 ```
 
 A more realistic example can be found here: [perf-vertex-stacks-01-collapsed-all.txt](https://github.com/jlfwong/speedscope/blob/100578c536a3afab39fb6803d28913d12eac29c5/sample/profiles/stackcollapse/perf-vertx-stacks-01-collapsed-all.txt)
+
+## Google "Trace Event Format"
+
+Used in `chrome://tracing`, the Google "Trace Event Format" is JSON-encoded, event-based format for logging performance events. See https://docs.google.com/document/d/1CvAClvFfyA5R-PhYUmn5OOQtYMH4h6I0nSsKchNAySU/preview#heading=h.xqopa5m0e28f for examples.
+
+speedscope supports importing a subset of these events. Namely, it supports `B`, `E`, and `X` events, as well as the `M` events used to specify the names of processes and threads.
