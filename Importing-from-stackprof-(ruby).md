@@ -1,6 +1,6 @@
 [`stackprof`](https://github.com/tmm1/stackprof) is a sampling call-stack profiler for Ruby.
 
-To record a profile, wrap your code in a `StackProf.run` block with `raw: true`, then save the JSON encoded version of the profile to a file.
+To record a profile, wrap your code in a `StackProf.run` block with `raw: true`, then save the JSON encoded version of the profile to a file. You'll need to be running `stackprof >= 0.2.11`.
 
 ```ruby
 require 'json'
